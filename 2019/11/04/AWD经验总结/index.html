@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Arjun">
 <meta property="og:description" content="——常规弱口令处理——#.修改root 用户密码   passwd root#.修改web后台初始密码    登录后台修改#.更新数据库密码    update user set password=password(“”) where user=’root’;    flush privileges#.修改数据库任意用户登录    update user set host=”localhost”">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-04T15:09:38.721Z">
+<meta property="og:updated_time" content="2019-11-06T01:41:46.076Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -333,11 +333,12 @@
 
       
         <p>——常规弱口令处理——<br>#.修改root 用户密码<br>   passwd root<br>#.修改web后台初始密码<br>    登录后台修改<br>#.更新数据库密码<br>    update user set password=password(“”) where user=’root’;<br>    flush privileges<br>#.修改数据库任意用户登录<br>    update user set host=”localhost” where user=”root”;<br>    flush privileges</p>
-<p>——系统命令/函数漏洞处理——<br>#.检查源代码中是否含有命令执行函数，然后在源代码中删除(函数：exec()、passthru()、system()、shell_exec()、反撇号`和shell_exec())<br>    了解grep命令的用法<br>    grep “exec()” /var/www/html<br>#.模糊查询后门关键字(防止服务器存放后门文件）<br>    了解find命令的用法——常规弱口令处理——<br>    find /var/www/html/ -name “*.php” | xargs grep “eval”<br>    //find命令限制文件类型为php grep搜索包含eval的文件<br>#.find查找最近修改文件<br>    #查找当前目录下，最近24小时修改过的文件。<br>    find ./ -mtime 0<br>    find ./ -mmin -30//最近30分钟<br>    #.禁用系统函数<br>    vim /etc/php.ini    disable_functions=phpinfo,eval,passthru,exec,system,chroot,scandir,chgrp,chown,shell_exec,proc_open,proc_get_status,ini_alter,ini_alter,ini_restore,dl,pfsockopen,openlog,syslog,readlink,symlink,popepassthru,stream_socket_server,fsocket,fsockopen</p>
-<p>——异常端口口处理——<br>#.查看异常端口（除规定和必须服务外全部kill -9 pid)[*注意多次检查，防后台脚本再起服务]：<br>    查看端口的命令netstat 使用方法</p>
-<p>#.检查脚本重启端口<br>    ps -ef | grep ppid //检查重启文件路径<br>                       //检查挂起程序<br>                       //挂起方式crond或rc.locl</p>
+<p>——系统命令/函数漏洞处理——<br>#.检查源代码中是否含有命令执行函数，然后在源代码中删除(函数：exec()、passthru()、system()、shell_exec()、反撇号`和shell_exec())<br>    了解grep命令的用法<br>    grep “exec()” /var/www/html<br>#.模糊查询后门关键字(防止服务器存放后门文件）<br>    了解find命令的用法——常规弱口令处理——<br>    find /var/www/html/ -name “*.php” | xargs grep “eval”<br>    //find命令限制文件类型为php grep搜索包含eval的文件<br>#.find查找最近修改文件<br>    #查找当前目录下，最近24小时修改过的文件。<br>    find ./ -mtime 0<br>    find ./ -mmin -30//最近30分钟<br>    #.禁用系统函数<br>    vim /etc/php.ini<br>    disable_functions=phpinfo,eval,passthru,exec,system,chroot,scandir,chgrp,chown,shell_exec,<br>    proc_open,proc_get_status,ini_alter,ini_alter,ini_restore,dl,pfsockopen,openlog,syslog,<br>    readlink,symlink,popepassthru,stream_socket_server,fsocket,fsockopen</p>
+<p>————异常端口口处理———–<br>#.查看异常端口（除规定和必须服务外全部kill -9 pid)[*注意多次检查，防后台脚本再起服务]：<br>    查看端口的命令netstat 使用方法<br>    netstat -ano<br>    netstat -ano | grep 端口号</p>
+<p>#.检#.检查脚本重启端口   ps查看正在运行的进程<br>kill -9 + pid 强制杀死进程<br>ef显示所有进程和命令行提示符信息<br>aux显示所有进程和展示进程占用系统资源信息<br>    ps -ef | grep ppid //检查重启文件路径<br>                       //检查挂起程序<br>                       //挂起方式crond或rc.locl</p>
 <p>——文件上传类防护方法——<br>#.阻止上传文件(可读可执行不可上传)#系统处理<br>    chmod 命令使用方法<br>#.上传目录循环删除文件（阻止上传webshell）#命令处理<br>    shell脚本：<br>        循环删除上传目录<br>    python脚本也可行</p>
 <p>#.阻止上传文件(退出上传.php)#代码级处理<br>    在源代码中插入exit();，自动退出上传过程。<br>#.备份网站到跟目录下(防被删站判0分)<br>    cp -r /var/www/html /<br>#.日志文件只读（防止通过日志文件生成脚本）<br>    chmod -R 444 /etc/httpd/logs</p>
+<p>————文件包含————–<br>#.文件包含<br>    vim /etc/php.ini<br>    allow_url_fopen=off //阻止远程文件包含<br>    allow_url_include=off //阻止远程文件包含</p>
 <pre><code>------SQL注入防护方法------
 $a，直接写死，不使用传递参数
 用str_replace函数过滤&apos;
