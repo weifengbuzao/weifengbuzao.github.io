@@ -79,14 +79,23 @@
 
 
 
-<meta name="description" content="万物归零，你是一">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Arjun">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;index.html">
+<meta name="description" content="1. 进入xserver-mysql, 加固MySQL服务器，使所有的访问能被审计，要求通过对mysqld的启动项进行加固        设定审计文件为&#x2F;var&#x2F;log&#x2F;mysql&#x2F;access.log       #cd &#x2F;etc&#x2F;       # vi my.cnf       下面红色标记部分为增加的日志选项,重新启动后起作用 2. 配置Linux 防火墙，允许MySQL服务能够被访问，要求">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql安全加固">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;index.html">
 <meta property="og:site_name" content="Arjun">
-<meta property="og:description" content="万物归零，你是一">
+<meta property="og:description" content="1. 进入xserver-mysql, 加固MySQL服务器，使所有的访问能被审计，要求通过对mysqld的启动项进行加固        设定审计文件为&#x2F;var&#x2F;log&#x2F;mysql&#x2F;access.log       #cd &#x2F;etc&#x2F;       # vi my.cnf       下面红色标记部分为增加的日志选项,重新启动后起作用 2. 配置Linux 防火墙，允许MySQL服务能够被访问，要求">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;%5Cimages%5Cpasted-0.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;%5Cimages%5Cpasted-1.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;%5Cimages%5Cpasted-2.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;%5Cimages%5Cpasted-3.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;%5Cimages%5Cpasted-4.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;%5Cimages%5Cpasted-5.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;%5Cimages%5Cpasted-6.png">
+<meta property="og:updated_time" content="2019-11-06T03:29:37.866Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;%5Cimages%5Cpasted-0.png">
 
 
 
@@ -116,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2019/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/06/mysql安全加固-1/"/>
 
 
 
 
 
-  <title>归档 | Arjun</title>
+  <title>mysql安全加固 | Arjun</title>
   
 
 
@@ -146,7 +155,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -250,185 +259,180 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/06/mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Arjun丶阿君">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arjun">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">mysql安全加固</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-06T11:18:44+08:00">
+                2019-11-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 4 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/06/mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1/" itemprop="url">
-              
-                <span itemprop="name">mysql安全加固</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-06T11:18:44+08:00"
-              content="2019-11-06" >
-          11-06
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/06/owasp%20top10/" itemprop="url">
-              
-                <span itemprop="name">owasp top10</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-06T08:42:51+08:00"
-              content="2019-11-06" >
-          11-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/04/AWD%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/" itemprop="url">
-              
-                <span itemprop="name">AWD经验总结</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-04T13:16:23+08:00"
-              content="2019-11-04" >
-          11-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
+        <pre><code>1. 进入xserver-mysql, 加固MySQL服务器，使所有的访问能被审计，要求通过对mysqld的启动项进行加固
 
-        
-        
-        
+      设定审计文件为/var/log/mysql/access.log
+      #cd /etc/
+      # vi my.cnf
+      下面红色标记部分为增加的日志选项,重新启动后起作用</code></pre><p><img src="%5Cimages%5Cpasted-0.png" alt="upload successful"></p>
+<pre><code>2. 配置Linux 防火墙，允许MySQL服务能够被访问，要求规则中只包含端口项</code></pre><p>   <img src="%5Cimages%5Cpasted-1.png" alt="upload successful"></p>
+<pre><code>3.进入xserver-mysql，查看所有用户及权限，找到可以从任何IP地址访问的用户
+Mysql&gt;use mysql;
+Mysql&gt;select host,user from user;</code></pre><p>   <img src="%5Cimages%5Cpasted-2.png" alt="upload successful"></p>
+<pre><code>4.对题号3中的漏洞进行加固，设定该用户只能从公司PC-1访问，用grants 命令进行管理。
 
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/10/31/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-10-31T11:40:30+08:00"
-              content="2019-10-31" >
-          10-31
-        </time>
-      </div>
-
-    </header>
-  </article>
+Mysql&gt;GRANT ALL ON *.* TO test@192.168.x.x   IDENTIFIED BY “” WITH GRANT OPTION;
 
 
 
+5.检查xserver-mysql中的是否存在数据库匿名用户，如果存在数据库匿名用户，则删除该用户，将发现的数据库匿名用户信息以及删除过程
+
+mysql&gt;use mysql;
+mysql&gt; select host,user from user where user=””;
+mysql&gt;flush privileges;    #</code></pre><p><img src="%5Cimages%5Cpasted-3.png" alt="upload successful"></p>
+<p><img src="%5Cimages%5Cpasted-4.png" alt="upload successful"></p>
+<pre><code>6. 改变默认MySQL管理员的名称，将系统的默认管理员root 改为admin，防止被列举，将执行过程</code></pre><p><img src="%5Cimages%5Cpasted-5.png" alt="upload successful"></p>
+<pre><code>7. 禁止MySQL对本地文件进行存取，对mysqld 的启动项进行加固
+
+#cd /etc/
+# vi my.cnf
+下面红色框中为增加的本地文件存取的限制语句,重新启动后起作用
+增加语句为
+set-variable=local-infile=0
+#/etc/init.d/mysqld stop  关闭
+#/etc/init.d/mysqld start 启动</code></pre><p><img src="%5Cimages%5Cpasted-6.png" alt="upload successful"></p>
+<pre><code>8. 限制一般用户浏览其他用户数据库，对mysqld 的启动项进行加固
+
+跟上边一样，配置文件增加配置项，增加语句为
+
+skip-show-database
+
+#/etc/init.d/mysqld stop
+
+#/etc/init.d/mysqld start</code></pre>
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/06/owasp%20top10/" rel="next" title="owasp top10">
+                <i class="fa fa-chevron-left"></i> owasp top10
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -436,6 +440,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -646,6 +654,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
