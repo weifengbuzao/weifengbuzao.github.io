@@ -79,23 +79,22 @@
 
 
 
-<meta name="description" content="1. 进入xserver-mysql, 加固MySQL服务器，使所有的访问能被审计，要求通过对mysqld的启动项进行加固        设定审计文件为&#x2F;var&#x2F;log&#x2F;mysql&#x2F;access.log       #cd &#x2F;etc&#x2F;       # vi my.cnf       下面红色标记部分为增加的日志选项,重新启动后起作用 2. 配置Linux 防火墙，允许MySQL服务能够被访问，要求">
+<meta name="description" content="1. 进入xserver-mysql, 加固MySQL服务器，使所有的访问能被审计，要求通过对mysqld的启动项进行加固    设定审计文件为&#x2F;var&#x2F;log&#x2F;mysql&#x2F;access.log   #cd &#x2F;etc&#x2F;   # vi my.cnf   下面红色标记部分为增加的日志选项,重新启动后起作用 2. 配置Linux 防火墙，允许MySQL服务能够被访问，要求规则中只包含端口项   ![](">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql安全加固">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;index.html">
 <meta property="og:site_name" content="Arjun">
-<meta property="og:description" content="1. 进入xserver-mysql, 加固MySQL服务器，使所有的访问能被审计，要求通过对mysqld的启动项进行加固        设定审计文件为&#x2F;var&#x2F;log&#x2F;mysql&#x2F;access.log       #cd &#x2F;etc&#x2F;       # vi my.cnf       下面红色标记部分为增加的日志选项,重新启动后起作用 2. 配置Linux 防火墙，允许MySQL服务能够被访问，要求">
+<meta property="og:description" content="1. 进入xserver-mysql, 加固MySQL服务器，使所有的访问能被审计，要求通过对mysqld的启动项进行加固    设定审计文件为&#x2F;var&#x2F;log&#x2F;mysql&#x2F;access.log   #cd &#x2F;etc&#x2F;   # vi my.cnf   下面红色标记部分为增加的日志选项,重新启动后起作用 2. 配置Linux 防火墙，允许MySQL服务能够被访问，要求规则中只包含端口项   ![](">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;%5Cimages%5Cpasted-0.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;%5Cimages%5Cpasted-1.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;%5Cimages%5Cpasted-2.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;%5Cimages%5Cpasted-3.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;%5Cimages%5Cpasted-4.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;%5Cimages%5Cpasted-5.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;%5Cimages%5Cpasted-6.png">
-<meta property="og:updated_time" content="2019-11-06T03:29:37.866Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;pasted-0.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%5Cpasted-2.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%5Cpasted-3.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%5Cpasted-4.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%5Cpasted-5.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%5Cpasted-6.jpg">
+<meta property="og:updated_time" content="2019-11-06T07:42:04.137Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1&#x2F;%5Cimages%5Cpasted-0.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;pasted-0.png">
 
 
 
@@ -342,14 +341,20 @@
       
         <pre><code>1. 进入xserver-mysql, 加固MySQL服务器，使所有的访问能被审计，要求通过对mysqld的启动项进行加固
 
-      设定审计文件为/var/log/mysql/access.log
-      #cd /etc/
-      # vi my.cnf
-      下面红色标记部分为增加的日志选项,重新启动后起作用</code></pre><p><img src="%5Cimages%5Cpasted-0.png" alt="upload successful"></p>
-<pre><code>2. 配置Linux 防火墙，允许MySQL服务能够被访问，要求规则中只包含端口项</code></pre><p>   <img src="%5Cimages%5Cpasted-1.png" alt="upload successful"></p>
-<pre><code>3.进入xserver-mysql，查看所有用户及权限，找到可以从任何IP地址访问的用户
+  设定审计文件为/var/log/mysql/access.log
+  #cd /etc/
+  # vi my.cnf
+  下面红色标记部分为增加的日志选项,重新启动后起作用</code></pre><p><img src="/.com//pasted-0.png" alt></p>
+<pre><code>2. 配置Linux 防火墙，允许MySQL服务能够被访问，要求规则中只包含端口项
+
+
+![](\_posts\mysql安全加固\pasted-1.png)
+
+
+
+3.进入xserver-mysql，查看所有用户及权限，找到可以从任何IP地址访问的用户
 Mysql&gt;use mysql;
-Mysql&gt;select host,user from user;</code></pre><p>   <img src="%5Cimages%5Cpasted-2.png" alt="upload successful"></p>
+Mysql&gt;select host,user from user;</code></pre><p>   <img src="/.com//mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%5Cpasted-2.png" alt></p>
 <pre><code>4.对题号3中的漏洞进行加固，设定该用户只能从公司PC-1访问，用grants 命令进行管理。
 
 Mysql&gt;GRANT ALL ON *.* TO test@192.168.x.x   IDENTIFIED BY “” WITH GRANT OPTION;
@@ -360,9 +365,9 @@ Mysql&gt;GRANT ALL ON *.* TO test@192.168.x.x   IDENTIFIED BY “” WITH GRANT 
 
 mysql&gt;use mysql;
 mysql&gt; select host,user from user where user=””;
-mysql&gt;flush privileges;    #</code></pre><p><img src="%5Cimages%5Cpasted-3.png" alt="upload successful"></p>
-<p><img src="%5Cimages%5Cpasted-4.png" alt="upload successful"></p>
-<pre><code>6. 改变默认MySQL管理员的名称，将系统的默认管理员root 改为admin，防止被列举，将执行过程</code></pre><p><img src="%5Cimages%5Cpasted-5.png" alt="upload successful"></p>
+mysql&gt;flush privileges;    #</code></pre><p><img src="/.com//mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%5Cpasted-3.png" alt></p>
+<p><img src="/.com//mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%5Cpasted-4.png" alt></p>
+<pre><code>6. 改变默认MySQL管理员的名称，将系统的默认管理员root 改为admin，防止被列举，将执行过程</code></pre><p><img src="/.com//mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%5Cpasted-5.png" alt></p>
 <pre><code>7. 禁止MySQL对本地文件进行存取，对mysqld 的启动项进行加固
 
 #cd /etc/
@@ -371,15 +376,13 @@ mysql&gt;flush privileges;    #</code></pre><p><img src="%5Cimages%5Cpasted-3.pn
 增加语句为
 set-variable=local-infile=0
 #/etc/init.d/mysqld stop  关闭
-#/etc/init.d/mysqld start 启动</code></pre><p><img src="%5Cimages%5Cpasted-6.png" alt="upload successful"></p>
+#/etc/init.d/mysqld start 启动</code></pre><p><img src="/.com//mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%5Cpasted-6.jpg" alt></p>
 <pre><code>8. 限制一般用户浏览其他用户数据库，对mysqld 的启动项进行加固
 
 跟上边一样，配置文件增加配置项，增加语句为
 
 skip-show-database
-
 #/etc/init.d/mysqld stop
-
 #/etc/init.d/mysqld start</code></pre>
       
     </div>
@@ -404,8 +407,8 @@ skip-show-database
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/06/owasp%20top10/" rel="next" title="owasp top10">
-                <i class="fa fa-chevron-left"></i> owasp top10
+              <a href="/2019/11/04/AWD%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/" rel="next" title="AWD经验总结">
+                <i class="fa fa-chevron-left"></i> AWD经验总结
               </a>
             
           </div>
@@ -413,6 +416,10 @@ skip-show-database
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/06/mysql%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%9B%BA/" rel="prev" title="mysql常见加固">
+                mysql常见加固 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>

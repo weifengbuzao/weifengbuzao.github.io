@@ -79,15 +79,22 @@
 
 
 
-<meta name="description" content="———–A1  注入 injection———- Web安全头号大敌。注入攻击漏洞往往是应用程序缺少对输入进行安全性检查所引起的。攻击者把一些包含攻击代码当做命令或者查询语句发送给解释器，这些恶意数据可以欺骗解释器，从而执行计划外的命令或者未授权访问数据。注入漏洞通常能SQL查询、LDAP查询、OS命令、程序参数等中出现。 防范： 1.使用安全的API，避免使用解释器或提供参数化的接口（prepa">
+<meta name="description" content="进入xserver-mysql, 加固MySQL服务器，使所有的访问能被审计，要求通过对mysqld的启动项进行加固   设定审计文件为&#x2F;var&#x2F;log&#x2F;mysql&#x2F;access.log  #cd &#x2F;etc&#x2F; vi my.cnf  下面红色标记部分为增加的日志选项,重新启动后起作用    2. 配置Linux 防火墙，允许MySQL服务能够被访问，要求规则中只包含端口项   ![](\_post">
 <meta property="og:type" content="article">
-<meta property="og:title" content="owasp top10">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;owasp%20top10&#x2F;index.html">
+<meta property="og:title" content="mysql常见加固">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%9B%BA&#x2F;index.html">
 <meta property="og:site_name" content="Arjun">
-<meta property="og:description" content="———–A1  注入 injection———- Web安全头号大敌。注入攻击漏洞往往是应用程序缺少对输入进行安全性检查所引起的。攻击者把一些包含攻击代码当做命令或者查询语句发送给解释器，这些恶意数据可以欺骗解释器，从而执行计划外的命令或者未授权访问数据。注入漏洞通常能SQL查询、LDAP查询、OS命令、程序参数等中出现。 防范： 1.使用安全的API，避免使用解释器或提供参数化的接口（prepa">
+<meta property="og:description" content="进入xserver-mysql, 加固MySQL服务器，使所有的访问能被审计，要求通过对mysqld的启动项进行加固   设定审计文件为&#x2F;var&#x2F;log&#x2F;mysql&#x2F;access.log  #cd &#x2F;etc&#x2F; vi my.cnf  下面红色标记部分为增加的日志选项,重新启动后起作用    2. 配置Linux 防火墙，允许MySQL服务能够被访问，要求规则中只包含端口项   ![](\_post">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-06T03:10:18.576Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;pasted-0.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;mysql%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%9B%BA%5Cpasted-2.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;mysql%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%9B%BA%5Cpasted-3.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;mysql%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%9B%BA%5Cpasted-4.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;mysql%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%9B%BA%5Cpasted-5.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;mysql%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%9B%BA%5Cpasted-6.jpg">
+<meta property="og:updated_time" content="2019-11-06T07:48:55.280Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;pasted-0.png">
 
 
 
@@ -117,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/06/owasp top10/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/06/mysql常见加固/"/>
 
 
 
 
 
-  <title>owasp top10 | Arjun</title>
+  <title>mysql常见加固 | Arjun</title>
   
 
 
@@ -265,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/06/owasp%20top10/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/06/mysql%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%9B%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Arjun丶阿君">
@@ -282,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">owasp top10</h1>
+          <h1 class="post-title" itemprop="name headline">mysql常见加固</h1>
         
 
         <div class="post-meta">
@@ -294,7 +301,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-06T08:42:51+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-06T15:47:05+08:00">
                 2019-11-06
               </time>
             
@@ -332,45 +339,52 @@
       
 
       
-        <p>———–A1  注入 injection———-</p>
-<p>Web安全头号大敌。注入攻击漏洞往往是应用程序缺少对输入进行安全性检查所引起的。攻击者把一些包含攻击代码当做命令或者查询语句发送给解释器，这些恶意数据可以欺骗解释器，从而执行计划外的命令或者未授权访问数据。注入漏洞通常能SQL查询、LDAP查询、OS命令、程序参数等中出现。</p>
-<p>防范：</p>
-<p>1.使用安全的API，避免使用解释器或提供参数化的接口（prepared statements，or stored procedures）<br>2.使用白名单来规范化的输入验证方法<br>3.对输入的特殊字符进行Escape转义处理<br>4.权限最小化，减轻被注入的影响</p>
-<p>———A2 失效的身份认证和会话管理———– </p>
-<p>与认证和会话管理相关的应用程序功能往往得不到正确管理，这就导致攻击者破坏密码、密匙、会话令牌或利用实施漏洞冒充其他用户身份</p>
-<p>防范：使用强大的认证和会话管理控制-OWASP的应用安全验证标准。</p>
-<p>1.使用简单集中标准化的认证方式；<br>2.确保SSL在任何时候都会保护会话；<br>3.使用会话管理功能；<br>会话管理：当用户不操作时，系统必须自动终止超时会话，必须有时间限制；必须提供退出功能，允许用户强制退出会话；会话标识足够随机，防止攻击者猜测到标识；用户登录后必须分配新的会话标识，不使用用户未登录前所使用的标识，防止会话攻击</p>
-<p>——-A3 跨站脚本-XSS———</p>
-<p>XSS的出现时间跟SQL差不多，是最普遍的web应用安全漏洞。当应用程序在发送给浏览器的页面中包含用户提供的数据，但没有经过适当验证或转译，就会导致跨站脚本漏洞。XSS允许攻击者在受害者的浏览器中执行脚本，这些脚本可以劫持用户会话，破坏网站，或将用户重定向到恶意站点。</p>
-<p>防范：</p>
-<p>1.对所有不可信的输入数据进行恰当的转义escape<br>2.使用白名单的具有恰当的规范化解码功能的输入验证方法<br>3.使用内容安全策略(CSP)来抵御整个站点的攻击</p>
-<p>——-A4 不安全的直接对象引用———</p>
-<p>当开发人员公开对内部实现对象(如文件、目录或数据库键)的引用时，就会出现直接对象引用。如果没有访问控制检查或其他保护，攻击者可以操纵这些引用来访问未经授权的数据。</p>
-<p>防范：</p>
-<p>1.使用基于用户或会话的间接对象访问, 防止攻击者直接攻击未授权资源.<br>2.访问检查:对任何来自不受信源所使用的所有直接对象引用都进行访问控制检测，确保用户对要求的对象有访问权限</p>
-<p>———–A5 安全配置错误———</p>
-<p>良好的安全性需要为应用程序、框架、应用服务器、web服务器、数据库服务器和平台定义和部署安全配置。默认值通常是不安全的。另外，软件应该保持更新。攻击者通过访问默认账户、未使用的网页、未安装补丁的漏洞、未被保护的文件和目录等，以获得对系统未授权的访问</p>
-<p>防范：</p>
-<p>1.及时了解并部署每个环境的软件更新和补丁信息，包括所有的代码库。(自动化安装部署)<br>2.统一出错处理机制，错误处理会向用户显示堆栈跟踪或其他过于丰富的错误消息信息。<br>3.使用提供有效分离和安全性强大的应用程序架构。</p>
-<p>———–A6 敏感信息泄露———–</p>
-<p>保护与加密敏感数据已经成为网络应用的最重要的组成部分。最常见的漏洞是应该进行加密的数据没有进行加密。使用加密的情况下常见问题是不安全的密钥和使用弱算法加密。</p>
-<p>防范：</p>
-<p>1.加密存储和传输所有的敏感数据<br>2.确保使用合适强大的标准算法和密钥，并且密钥管理到位<br>3.确保使用密码专用算法存储密码<br>4.及时清除没有必要存放的重要的/敏感数据<br>5.禁用自动收集敏感数据,禁用包含敏感数据的页面缓存<br>加密方法：采用非对称加密算法管理对称加密算法密钥，用对称加盟算法加密数据</p>
-<p>————A7 缺少功能级访问控制———-</p>
-<p>大多数web应用程序在实现UI中可见的功能之前，都要验证功能级别的访问权限。但是，当访问每个函数时，应用程序需要在服务器上执行相同的访问控制检查。如果请求没有得到验证，攻击者将能够伪造请求，以便在没有适当授权的情况下访问功能</p>
-<p>防范：</p>
-<p>1.检查管理权限的过程并确保能够容易进行升级和审计，切忌硬编码<br>2.默认缺省情况下，应该拒绝所有访问的执行权限。<br>3.对于每个功能的访问，需要明确的角色授权。检查每个功能分配的权限合理有效</p>
-<p>———-A8 跨站请求伪造 CSRF———–</p>
-<p>利用了网站允许攻击者预测特定操作的所有细节这一特点。由于浏览器自动发送会话cookie等认证凭证，导致攻击者能够创建恶意的web页面来伪造请求。这些伪造的请求很难和合法的请求区分开。CSRF通过伪装来自受信任用户的请求来利用受信任的网站</p>
-<p>防范：<br>1.给每个HTTP请求添加一个不可预测的令牌，并保证该令牌对每个用户会话来说是唯一性。最好是将独有的令牌包含在隐藏字段中，通过HTTP请求发送，避免在URL中暴露出来。<br>2.要求用户重新认证或者判断他们是一个真实的用户</p>
-<p>————A9 使用含有已知漏洞的组件————-</p>
-<p>开发人员使用的组件也会含有漏洞，这些漏洞能够被自动化工具发现和利用。然后攻击者根据需要定制攻击代码并实施攻击。</p>
-<p>防范：</p>
-<p>1.标识正在使用的所有组件和版本，包括所有依赖项<br>2.及时关注这些组件的安全信息并保证他们是最新的。<br>3.建立使用组件的安全策略，禁止使用未经安全评估的组件。<br>4.在适当情况下，对组件进行安全封装，精简不必要的功能，封装易受攻击部分</p>
-<p>—————A10 未验证的重定向和转发————-<br>应用程序经常将用户重定向到其他网页，或以类似的方式进行内部转发。当目标网页是通过一个未验证的参数来指定时，就容易被攻击者利用。攻击者通过诱使受害人去点击未经验证的重定向链接，从而利用不安全的转发绕过安全检测。攻击者通过重定向可以试图安装恶意软件或者诱使受害人泄露密码等敏感信息，通过转发可以绕过访问控制。</p>
-<p>防范：</p>
-<p>1.避免使用重定向和转发<br>2.如果使用了重定向和转发，则不要在确定目标时涉及到用户参数。<br>3.如果无法避免使用目标参数，则应确保目标参数值对于当前用户是有效的并已授权。</p>
+        <ol>
+<li><p>进入xserver-mysql, 加固MySQL服务器，使所有的访问能被审计，要求通过对mysqld的启动项进行加固</p>
+<p>  设定审计文件为/var/log/mysql/access.log<br>  #cd /etc/</p>
+<h1 id="vi-my-cnf"><a href="#vi-my-cnf" class="headerlink" title="vi my.cnf"></a>vi my.cnf</h1><p>  下面红色标记部分为增加的日志选项,重新启动后起作用</p>
+</li>
+</ol>
+<p><img src="/2019/11/06/pasted-0.png" alt></p>
+<pre><code>2. 配置Linux 防火墙，允许MySQL服务能够被访问，要求规则中只包含端口项
 
+
+![](\_posts\mysql安全加固\pasted-1.png)
+
+
+
+3.进入xserver-mysql，查看所有用户及权限，找到可以从任何IP地址访问的用户
+Mysql&gt;use mysql;
+Mysql&gt;select host,user from user;</code></pre><p>   <img src="/2019/11/06/mysql%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%9B%BA%5Cpasted-2.png" alt></p>
+<pre><code>4.对题号3中的漏洞进行加固，设定该用户只能从公司PC-1访问，用grants 命令进行管理。
+
+Mysql&gt;GRANT ALL ON *.* TO test@192.168.x.x   IDENTIFIED BY “” WITH GRANT OPTION;
+
+
+
+5.检查xserver-mysql中的是否存在数据库匿名用户，如果存在数据库匿名用户，则删除该用户，将发现的数据库匿名用户信息以及删除过程
+
+mysql&gt;use mysql;
+mysql&gt; select host,user from user where user=””;
+mysql&gt;flush privileges;    #</code></pre><p><img src="/2019/11/06/mysql%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%9B%BA%5Cpasted-3.png" alt></p>
+<p><img src="/2019/11/06/mysql%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%9B%BA%5Cpasted-4.png" alt></p>
+<pre><code>6. 改变默认MySQL管理员的名称，将系统的默认管理员root 改为admin，防止被列举，将执行过程</code></pre><p><img src="/.com//mysql%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%9B%BA%5Cpasted-5.png" alt></p>
+<pre><code>7. 禁止MySQL对本地文件进行存取，对mysqld 的启动项进行加固
+
+#cd /etc/
+# vi my.cnf
+下面红色框中为增加的本地文件存取的限制语句,重新启动后起作用
+增加语句为
+set-variable=local-infile=0
+#/etc/init.d/mysqld stop  关闭
+#/etc/init.d/mysqld start 启动</code></pre><p><img src="/2019/11/06/mysql%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%9B%BA%5Cpasted-6.jpg" alt></p>
+<pre><code>8. 限制一般用户浏览其他用户数据库，对mysqld 的启动项进行加固
+
+跟上边一样，配置文件增加配置项，增加语句为
+
+skip-show-database
+#/etc/init.d/mysqld stop
+#/etc/init.d/mysqld start</code></pre>
       
     </div>
     
@@ -394,8 +408,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/04/AWD%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/" rel="next" title="AWD经验总结">
-                <i class="fa fa-chevron-left"></i> AWD经验总结
+              <a href="/2019/11/06/mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1/" rel="next" title="mysql安全加固">
+                <i class="fa fa-chevron-left"></i> mysql安全加固
               </a>
             
           </div>
@@ -403,10 +417,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/06/mysql%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA-1/" rel="prev" title="mysql安全加固">
-                mysql安全加固 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -458,8 +468,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -501,6 +520,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vi-my-cnf"><span class="nav-number">1.</span> <span class="nav-text">vi my.cnf</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
