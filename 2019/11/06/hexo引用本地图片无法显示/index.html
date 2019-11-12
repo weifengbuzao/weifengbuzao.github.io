@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="最近重新开始用起hexo，但是发现在文章中引用本地图片时总是显示不出来。 问题如下图所示。 在这里插入图片描述花费了许久时间才解决这个问题。因此将一些解决经验整理出来，希望能帮助到大家。一、插件安装与配置 首先我们需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-image npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset">
+<meta name="description" content="最近重新开始用起hexo，但是发现在文章中引用本地图片时总是显示不出来。 问题如下图所示。 在这里插入图片描述花费了许久时间才解决这个问题。因此在百度上找了一些解决经验整理出来，希望能帮助到大家。一、插件安装与配置 首先我们需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-image npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo引用本地图片无法显示">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;hexo%E5%BC%95%E7%94%A8%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA&#x2F;index.html">
 <meta property="og:site_name" content="Arjun">
-<meta property="og:description" content="最近重新开始用起hexo，但是发现在文章中引用本地图片时总是显示不出来。 问题如下图所示。 在这里插入图片描述花费了许久时间才解决这个问题。因此将一些解决经验整理出来，希望能帮助到大家。一、插件安装与配置 首先我们需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-image npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset">
+<meta property="og:description" content="最近重新开始用起hexo，但是发现在文章中引用本地图片时总是显示不出来。 问题如下图所示。 在这里插入图片描述花费了许久时间才解决这个问题。因此在百度上找了一些解决经验整理出来，希望能帮助到大家。一、插件安装与配置 首先我们需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-image npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;hexo%E5%BC%95%E7%94%A8%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA&#x2F;1.png">
-<meta property="og:updated_time" content="2019-11-06T08:38:19.119Z">
+<meta property="og:updated_time" content="2019-11-08T01:45:08.974Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;hexo%E5%BC%95%E7%94%A8%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA&#x2F;1.png">
 
@@ -336,7 +336,7 @@
       
         <p>最近重新开始用起hexo，但是发现在文章中引用本地图片时总是显示不出来。</p>
 <p>问题如下图所示。</p>
-<p>在这里插入图片描述<br><img src="/2019/11/06/hexo%E5%BC%95%E7%94%A8%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA/1.png" alt><br>花费了许久时间才解决这个问题。<br>因此将一些解决经验整理出来，希望能帮助到大家。<br>一、插件安装与配置</p>
+<p>在这里插入图片描述<br><img src="/2019/11/06/hexo%E5%BC%95%E7%94%A8%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA/1.png" alt><br>花费了许久时间才解决这个问题。<br>因此在百度上找了一些解决经验整理出来，希望能帮助到大家。<br>一、插件安装与配置</p>
 <p>首先我们需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-image</p>
 <pre><code>npm install https://github.com/CodeFalling/hexo-asset-image --save</code></pre><p>但是这个插件的内容需要修改【不然可能会出Bug】</p>
 <p>打开/node_modules/hexo-asset-image/index.js，将内容更换为下面的代码</p>
@@ -435,6 +435,10 @@ for(var i = 0; i &lt; toprocess.length; i++){
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/11/12/LINUX%E5%AD%A6%E4%B9%A0/" rel="prev" title="LINUX学习">
+                LINUX学习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -501,7 +505,7 @@ for(var i = 0; i &lt; toprocess.length; i++){
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -516,17 +520,33 @@ for(var i = 0; i &lt; toprocess.length; i++){
           
 
           
-
+		   
           
           
 
           
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://reb0rn.design/" title="张灵灵" target="_blank">张灵灵</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           
 
         </div>
       </section>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=425137039&auto=1&height=32"></iframe>
 
       
 
